@@ -19,10 +19,10 @@ void setup() {
   Serial.begin(57600);
 //  startTime = millis();
 //  started = false;
-//  
-//  Firmata.setFirmwareVersion(FIRMATA_MAJOR_VERSION, FIRMATA_MINOR_VERSION);
-//  Firmata.attach(ANALOG_MESSAGE, analogWriteCallback);
-//  Firmata.begin(57600);
+  
+  Firmata.setFirmwareVersion(FIRMATA_MAJOR_VERSION, FIRMATA_MINOR_VERSION);
+  Firmata.attach(ANALOG_MESSAGE, analogWriteCallback);
+  Firmata.begin(57600);
   
   pinMode(IR1, INPUT_PULLUP);
   pinMode(IR2, INPUT_PULLUP);
@@ -60,8 +60,8 @@ if (IR2_read == 0){
   Serial.println("LICK TWO");
   IR2_val = 500;
 }
-//  Firmata.sendAnalog(out1, IR1_val);
-//  Firmata.sendAnalog(out2, IR2_val);
+ Firmata.sendAnalog(out1, IR1_val);
+ Firmata.sendAnalog(out2, IR2_val);
   IR1_val = 0;
   IR2_val = 0;
 //  count = 0;
