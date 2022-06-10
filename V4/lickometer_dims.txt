@@ -1,0 +1,2 @@
+"wall_thickness" = 7/64in
+"base_thickness" = 0.25in
